@@ -339,7 +339,13 @@ There are two things that is important to keep in mind:
 
 ### Omniauth
 
-Devise comes with Omniauth support out of the box to authenticate from other providers. You can read more about Omniauth support in the wiki:
+Devise comes with Omniauth support out of the box to authenticate with other providers. To use it, just specify your omniauth configuration in `config/initializers/devise.rb`:
+
+```ruby
+config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
+```
+
+You can read more about Omniauth support in the wiki:
 
 * https://github.com/plataformatec/devise/wiki/OmniAuth:-Overview
 
